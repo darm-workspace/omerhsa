@@ -1,0 +1,99 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import QuoteWizard from '../components/quote/QuoteWizard'; // Importamos el componente React
+import { Image } from 'astro:assets';
+
+// Puedes agregar íconos de seguridad o testimonios aquí si tienes los assets
+---
+
+<MainLayout 
+  title="Cotizador en Línea" 
+  description="Obtén tu cotización de seguro personalizada en minutos. Auto, Médico, Vida y Empresarial."
+>
+  <div class="min-h-screen bg-gray-50 relative overflow-hidden">
+    
+    <div class="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-omerhsa-primary/10 to-transparent z-0"></div>
+    <div class="absolute -top-20 -right-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+    <div class="absolute top-40 -left-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        
+        <div class="hidden lg:block lg:col-span-4 lg:sticky lg:top-28 space-y-8">
+          <div>
+            <h1 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+              Asegura tu futuro <br/>
+              <span class="text-omerhsa-primary">en pocos minutos.</span>
+            </h1>
+            <p class="text-gray-600 text-lg">
+              Nuestro cotizador inteligente analiza tus datos y preselecciona las mejores pólizas de las aseguradoras líderes en Honduras.
+              ???
+              Nuestro equipo analiza sus datos y le presenta las mejores opciones del mercado.
+              ???
+              (ok) Evaluamos su informacion para ofrecerle las mejores alternativas en seguros.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <span class="bg-green-100 text-green-700 p-1 rounded-md text-xs">🛡️</span> 
+              Tus datos están protegidos
+            </h3>
+            <ul class="space-y-3 text-sm text-gray-500">
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 mt-0.5">✓</span>
+                Cifrado SSL de 256-bits.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 mt-0.5">✓</span>
+                Cumplimiento con normativas de privacidad locales.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 mt-0.5">✓</span>
+                No compartimos tu información con terceros sin tu consentimiento.
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex items-center gap-4 opacity-70 grayscale hover:grayscale-0 transition-all">
+             <span class="text-sm font-bold text-gray-400">Trabajamos con:</span>
+             <span class="font-bold text-gray-600">FICOHSA</span>
+             <span class="font-bold text-gray-600">MAPFRE</span>
+             <span class="font-bold text-gray-600">ATLANTIDA</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-8">
+          <div class="lg:hidden mb-8 text-center">
+             <h1 class="text-3xl font-bold text-gray-900">Cotización en Línea</h1>
+             <p class="text-gray-500 mt-2">Completa el formulario para recibir asesoría.</p>
+          </div>
+
+          <QuoteWizard client:load />
+
+          <p class="text-center text-xs text-gray-400 mt-8 max-w-md mx-auto">
+            Al enviar este formulario aceptas nuestros <a href="/terminos" class="underline hover:text-omerhsa-primary">Términos y Condiciones</a> y <a href="/politicas" class="underline hover:text-omerhsa-primary">Políticas de Privacidad</a>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  /* Animación decorativa de fondo */
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+// src/components/home/VideoHero.astro
+---
+<section class="relative h-[70vh] w-full flex items-center justify-center overflow-hidden bg-black">
+  
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <iframe
+      class="hidden md:block absolute top-1/2 left-1/2 w-[177.77vh] min-w-full min-h-[56.25vw] h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      src="https://www.youtube.com/embed/9A2FomgdHSE?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&loop=1&playlist=9A2FomgdHSE&start=8&end=47&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+      title="Hero Video Background Desktop"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    ></iframe>
+
+    <iframe
+      class="block md:hidden absolute top-1/2 left-1/2 w-[177.77vh] min-w-full min-h-[56.25vw] h-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      src="https://www.youtube.com/embed/9A2FomgdHSE?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&loop=1&playlist=9A2FomgdHSE&start=8&end=47&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+      title="Hero Video Background Mobile"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    ></iframe>
+  </div>
+
+</section>
