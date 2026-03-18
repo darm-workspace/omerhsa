@@ -31,11 +31,5 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19"
-  },
-  "pnpm": {
-    "allowBuild": {
-      "esbuild": true,
-      "sharp": true
-    }
   }
 }

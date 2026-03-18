@@ -1,5 +1,6 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
+import { passthroughImageService } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import vue from '@astrojs/vue';
@@ -25,6 +26,7 @@ export default defineConfig({
   ],
 
   image: {
+    service: passthroughImageService(),
     domains: ['randomuser.me'],
   },
 });
